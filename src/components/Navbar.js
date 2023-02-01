@@ -6,7 +6,6 @@ function NavBar() {
 
     return (
         <nav>
-
             <button
                 type="button"
                 onClick={() => navigate('/')}
@@ -41,8 +40,6 @@ function NavBar() {
             >
                 Profielpagina
             </button>
-
-
         </nav>
     );
 }

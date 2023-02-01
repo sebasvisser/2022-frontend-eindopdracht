@@ -1,38 +1,27 @@
+import React from 'react';
 import './App.css';
-import NavBar
-    from "./components/Navbar";
+import { Route, Navigate, Routes } from 'react-router-dom';
+// componenten
+//import NavBar from "./components/Navbar";
+// pagina's
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import Result from "./pages/Result";
+import Donations from "./pages/Donations";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
    <>
-       <NavBar />
-       <header>
-           <h1>Weekend Escapes</h1>
-           <nav>
-               <a href="https://google.com">one word</a> |
-               <a href="https://google.com">one word</a> |
-               <a href="https://google.com">one word</a> |
-               <a href="https://google.com">one word</a>
-           </nav>
-       </header>
-       <main>
-           <header>
-               <h1>five words</h1>
-           </header>
-           <section>
-               <h2>three words</h2>
-               <p>forty-six words</p>
-               <p>forty-four words</p>
-           </section>
-           <section>
-               <h2>seven words</h2>
-               <p>sixty-eight words</p>
-               <p>forty-four words</p>
-           </section>
-       </main>
-       <footer>
-           <p>five words</p>
-       </footer>
+
+       <p>HOI</p>
+       <div className="content">
+           <Home />
+            <Search />
+           <Result />
+           <Donations />
+               <Profile />
+       </div>
    </>
   );
 }
