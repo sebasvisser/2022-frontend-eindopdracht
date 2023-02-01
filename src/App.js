@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import { Route, Navigate, Routes } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Route, Navigate, Routes } from "react-router-dom";
 // componenten
-//import NavBar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 // pagina's
 import Home from "./pages/Home";
 import Search from "./pages/Search";
@@ -12,17 +12,16 @@ import Profile from "./pages/Profile";
 
 function App() {
   return (
-   <>
-
-       <p>HOI</p>
-       <div className="content">
-           <Home />
-            <Search />
-           <Result />
-           <Donations />
-               <Profile />
-       </div>
-   </>
+    <>
+      <NavBar />
+      <div className="content">
+        <Home />
+        <Search />
+        <Result />
+        <Donations />
+        <Profile />
+      </div>
+    </>
   );
 }
 
