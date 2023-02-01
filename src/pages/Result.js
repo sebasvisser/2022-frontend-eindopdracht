@@ -6,11 +6,13 @@ function Result() {
   return (
     <>
       <header>
-        <h1>Jouw ideale Weekend Escape zijn we aan het zoeken..</h1>
+        <h1 id={"resultHeader"}>
+          Jouw ideale Weekend Escape zijn we aan het zoeken..
+        </h1>
       </header>
       <main>
         <header>
-          <h2>Nog even geduld.</h2>
+          <span id={"resultSpan"}>Hier komen de resultaten.</span>
         </header>
       </main>
       <Footer />
