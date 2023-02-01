@@ -1,8 +1,11 @@
 import './App.css';
+import NavBar
+    from "./components/Navbar";
 
 function App() {
   return (
    <>
+       <NavBar />
        <header>
            <h1>Weekend Escapes</h1>
            <nav>

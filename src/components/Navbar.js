@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
-    const { isAuth, logout } = useContext(AuthContext);
     const navigate = useNavigate();
 
     return (
@@ -11,9 +9,9 @@ function NavBar() {
 
             <button
                 type="button"
-                onClick={() => navigate('/profile')}
+                onClick={() => navigate('/')}
             >
-               Profielpagina
+                Homepagina
             </button>
 
             <button
@@ -37,29 +35,14 @@ function NavBar() {
                Donatiepagina
             </button>
 
-            {isAuth ?
-                <button
-                    type="button"
-                    onClick={logout}
-                >
-                    Log uit
-                </button>
-                :
-                <div>
-                    <button
-                        type="button"
-                        onClick={() => navigate('/signin')}
-                    >
-                        Inlogpagina
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => navigate('/signup')}
-                    >
-                        Registratiepagina
-                    </button>
-                </div>
-            }
+            <button
+                type="button"
+                onClick={() => navigate('/profile')}
+            >
+                Profielpagina
+            </button>
+
+
         </nav>
     );
 }
