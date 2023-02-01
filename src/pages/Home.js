@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../assets/hero-image-weekend-escapes.jpg";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -42,14 +43,7 @@ function Home() {
           </article>
         </section>
       </main>
-      <footer>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ipsam
-          nulla! Animi debitis delectus ipsam iure necessitatibus nihil quo.
-          Earum ipsum laboriosam nostrum, qui sequi temporibus voluptate! Animi
-          iste, necessitatibus.
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }

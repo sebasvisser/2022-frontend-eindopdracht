@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 
 function Search() {
   return (
@@ -39,14 +40,7 @@ function Search() {
           </form>
         </section>
       </main>
-      <footer>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ipsam
-          nulla! Animi debitis delectus ipsam iure necessitatibus nihil quo.
-          Earum ipsum laboriosam nostrum, qui sequi temporibus voluptate! Animi
-          iste, necessitatibus.
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Profile() {
   return (
@@ -22,9 +23,7 @@ function Profile() {
           <p>forty-four words</p>
         </section>
       </main>
-      <footer>
-        <p>five words</p>
-      </footer>
+      <Footer />
     </>
   );
 }
