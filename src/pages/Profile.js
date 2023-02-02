@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import axios from "axios";
 
 function Profile() {
-  const first_name = "Mystery Person";
+  // Stukje state om alle info over profiel in op te slaan
+  const [personData, setPersonData] = useState({});
+  // Data van API binnenhalen zodat Profiel van Random iemand getoond kan worden indien niet ingelogd.
   async function getRandomProfile() {
     try {
       const result = await axios.get(`https://randomuser.me/api/`);
-      console.log(result.data);
+      setPersonData(result.data.results[0]);
+      console.log(personData);
     } catch (e) {
       console.error(e);
     }
@@ -17,7 +20,7 @@ function Profile() {
   return (
     <>
       <header>
-        <h1>Fijn dat je er bent {first_name}!</h1>
+        <h1>Fijn dat je er bent!</h1>
         <h3>
           Alle coole mensen doen het, nu heb jij ook de kans om eindelijk er
           eens echt voor te gaan.
