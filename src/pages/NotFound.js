@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
@@ -8,7 +9,11 @@ function NotFound() {
       </header>
       <main>
         <header>
-          <p>Ergens een typefoutje gemaakt? Is niet erg, kan gebeuren...</p>
+          <p>
+            Ergens een typefoutje gemaakt? Is niet erg, kan gebeuren.. <br />
+            Klik <Link to="/">hier</Link> om weer terug naar de{" "}
+            <Link to="/">homepagina</Link> te gaan.
+          </p>
         </header>
       </main>
     </>

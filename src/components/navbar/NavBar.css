@@ -1,0 +1,12 @@
+nav ul a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.default-link {
+    border-bottom: 1px solid transparent;
+}
+
+.active-link {
+    border-bottom: 1px solid black;
+}

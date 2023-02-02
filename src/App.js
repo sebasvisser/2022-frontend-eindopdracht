@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Route, Navigate, Routes } from "react-router-dom";
 // componenten
-import NavBar from "./components/Navbar";
+import NavBar from "./components/navbar/Navbar";
 // pagina's
 import Home from "./pages/Home";
 import Search from "./pages/Search";
