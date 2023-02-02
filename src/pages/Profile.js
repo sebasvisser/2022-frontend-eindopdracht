@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 function Profile() {
+  // Stukje state om alle info over profiel in op te slaan
+  const [personData, setPersonData] = useState({});
+  // Data van API binnenhalen zodat Profiel van Random iemand getoond kan worden indien niet ingelogd.
+  async function getRandomProfile() {
+    try {
+      const result = await axios.get(`https://randomuser.me/api/`);
+      setPersonData(result.data.results[0]);
+      console.log(personData);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  // getRandomProfile();
+
   return (
     <>
       <header>
-        <h1>PROFILEPAGE</h1>
+        <h1>Fijn dat je er bent!</h1>
+        <h3>
+          Als je nou ingelogd was, dan zouden hieronder jouw gegevens staan.
+        </h3>
       </header>
       <main>
-        <header>
-          <h1>five words</h1>
-        </header>
         <section>
-          <h2>three words</h2>
-          <p>forty-six words</p>
-          <p>forty-four words</p>
-        </section>
-        <section>
-          <h2>seven words</h2>
-          <p>sixty-eight words</p>
-          <p>forty-four words</p>
+          <article>
+            <ul>
+              <li>Voornaam + Achternaam</li>
+              <li>Email adres</li>
+            </ul>
+          </article>
         </section>
       </main>
       <Footer />

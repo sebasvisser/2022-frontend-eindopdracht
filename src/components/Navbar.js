@@ -3,6 +3,7 @@ import React from "react";
 function NavBar() {
   return (
     <nav>
+      {/*onderstaande buttons nog tot component maken met children en properties, = criteria*/}
       <button type="button">Homepagina</button>
 
       <button type="button">Zoekpagina</button>
