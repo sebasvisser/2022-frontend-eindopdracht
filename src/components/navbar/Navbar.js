@@ -39,7 +39,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
-            to="/donation"
+            to="/donations"
             className={({ isActive }) =>
               isActive === true ? "active-link" : "default-link"
             }
