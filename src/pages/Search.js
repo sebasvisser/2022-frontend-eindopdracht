@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 
 function Search() {
   return (
@@ -16,7 +16,7 @@ function Search() {
           <form>
             <fieldset>
               <legend>1 Kies het vliegveld vanwaar je vertrekt</legend>
-              <label for="airport-input">Vertrek vliegveld</label>
+              <label htmlFor="airport-input">Vertrek vliegveld</label>
               <select>
                 <option value="MST">Maastricht Aachen Airport</option>
                 <option value="EIN">Eindhoven Airport</option>
@@ -25,12 +25,12 @@ function Search() {
             </fieldset>
             <fieldset>
               <legend>2 Kies jouw vertrek datum</legend>
-              <label for="date-input">Vertrek datum</label>
+              <label htmlFor="date-input">Vertrek datum</label>
               <input type="date" name="date-input" id="date-input" />
             </fieldset>
             <fieldset>
               <legend>3 Geef je Budget aan</legend>
-              <label for="budget-input">Enter budget:</label>
+              <label htmlFor="budget-input">Enter budget:</label>
               <input type="number" name="budget-input" id="budget-input" />
             </fieldset>
             <fieldset>

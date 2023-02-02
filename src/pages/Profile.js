@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import axios from "axios";
 
 function Profile() {
@@ -27,6 +27,7 @@ function Profile() {
       </header>
       <main>
         <section>
+          {/*Hier een button INLOGGEN toevoegen, en die met OnClick de fetchdata aanroepen. Daarna hieronder die data invullen. */}
           <article>
             <ul>
               <li>Voornaam + Achternaam</li>

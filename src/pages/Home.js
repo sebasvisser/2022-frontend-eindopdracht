@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "../assets/hero-image-weekend-escapes.jpg";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 
 function Home() {
   return (
