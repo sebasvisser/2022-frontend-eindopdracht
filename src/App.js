@@ -9,6 +9,7 @@ import Search from "./pages/Search";
 import Result from "./pages/Result";
 import Donations from "./pages/Donations";
 import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/result" element={<Result />} />
         <Route path="/donations" element={<Donations />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
