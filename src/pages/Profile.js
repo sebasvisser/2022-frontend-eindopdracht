@@ -1,25 +1,60 @@
 import React from "react";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 function Profile() {
+  const first_name = "Mystery Person";
+  async function getRandomProfile() {
+    try {
+      const result = await axios.get(`https://randomuser.me/api/`);
+      console.log(result.data);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  // getRandomProfile();
+
   return (
     <>
       <header>
-        <h1>PROFILEPAGE</h1>
+        <h1>Fijn dat je er bent {first_name}!</h1>
+        <h3>
+          Alle coole mensen doen het, nu heb jij ook de kans om eindelijk er
+          eens echt voor te gaan.
+        </h3>
       </header>
       <main>
-        <header>
-          <h1>five words</h1>
-        </header>
         <section>
-          <h2>three words</h2>
-          <p>forty-six words</p>
-          <p>forty-four words</p>
-        </section>
-        <section>
-          <h2>seven words</h2>
-          <p>sixty-eight words</p>
-          <p>forty-four words</p>
+          <header>
+            <h2>Wees een held, doneer geld.</h2>
+          </header>
+          <article>
+            <h3>Coole Mensen Club</h3>
+            <p>
+              Voeg je toe aan het clubje mensen die gewoon cool zijn en doneren.
+            </p>
+            <ul>
+              <li>Zoekopdrachten Opslaan</li>
+              <li>Prijswaarschuwingen</li>
+              <li>Buitenkansjes per Mail</li>
+              <li>Warm gevoel omdat je iets goeds voor de wereld doet</li>
+            </ul>
+            <button>Doneer</button>
+          </article>
+          <article>
+            <h3>Super Coole Mensen Club</h3>
+            <p>
+              Voeg je toe aan het super clubje mensen die gewoon super cool zijn
+              en doneren.
+            </p>
+            <ul>
+              <li>Super Zoekopdrachten Opslaan</li>
+              <li>Super Prijswaarschuwingen</li>
+              <li>Super Buitenkansjes per Mail</li>
+              <li>Super Warm gevoel omdat je iets goeds voor de wereld doet</li>
+            </ul>
+            <button>Doneer Super</button>
+          </article>
         </section>
       </main>
       <Footer />
