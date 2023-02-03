@@ -10,8 +10,18 @@ ul {
     text-decoration: none;
 }
 nav ul a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
+}
+
+nav li {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
 }
 
 .default-link {
