@@ -28,7 +28,7 @@ function Donations() {
               <li>Buitenkansjes per Mail</li>
               <li>Warm gevoel omdat je iets goeds voor de wereld doet</li>
             </ul>
-            <DonateButton>Doneer Super</DonateButton>
+            <DonateButton>Doneer</DonateButton>
           </article>
           <article>
             <h3>Super Coole Mensen Club</h3>
@@ -42,15 +42,7 @@ function Donations() {
               <li>Super Buitenkansjes per Mail</li>
               <li>Super Warm gevoel omdat je iets goeds voor de wereld doet</li>
             </ul>
-            <button
-              onClick={() => {
-                alert(
-                  "Super Fijn dat je geld wilt doneren, maar ik heb liever een super goed cijfer voor mijn opdracht ;)"
-                );
-              }}
-            >
-              Doneer Super
-            </button>
+            <DonateButton fantastisch={true}>Doneer Super</DonateButton>
           </article>
         </section>
       </main>
