@@ -31,11 +31,11 @@ a:visited {
 }
 
 .default-link {
-    border-bottom: 1px solid transparent;
+    border: 1px solid transparent;
 }
 
 .active-link {
-    border-bottom: 1px solid black;
+    border: 1px solid red;
 }
 
 @media (max-width: 768px) {
