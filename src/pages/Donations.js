@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
+import DonateButton from "../components/donatebutton/DonateButton";
 
 function Donations() {
   return (
@@ -27,7 +28,7 @@ function Donations() {
               <li>Buitenkansjes per Mail</li>
               <li>Warm gevoel omdat je iets goeds voor de wereld doet</li>
             </ul>
-            <button>Doneer</button>
+            <DonateButton>Doneer</DonateButton>
           </article>
           <article>
             <h3>Super Coole Mensen Club</h3>
@@ -41,7 +42,7 @@ function Donations() {
               <li>Super Buitenkansjes per Mail</li>
               <li>Super Warm gevoel omdat je iets goeds voor de wereld doet</li>
             </ul>
-            <button>Doneer Super</button>
+            <DonateButton fantastisch={true}>Doneer Super</DonateButton>
           </article>
         </section>
       </main>
