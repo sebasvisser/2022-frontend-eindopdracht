@@ -18,6 +18,8 @@ function Donations() {
           <header>
             <h2>Wees een held, doneer geld.</h2>
           </header>
+        </section>
+        <section>
           <article>
             <h3>Coole Mensen Club</h3>
             <p>
