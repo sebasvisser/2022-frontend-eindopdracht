@@ -12,7 +12,16 @@ function Search() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    const paragraph = document.querySelector(".output");
+    const requestOrigin = data.origin;
+    const requestDate = data.departureDate;
+    const requestBudget = data.maxPrice;
+    const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=${requestOrigin}&departureDate=${requestDate}&oneWay=false&nonStop=false&maxPrice=${requestBudget}&viewBy=DESTINATION`;
+
+    paragraph.textContent = requestURL;
+  };
   console.log(errors);
 
   return (
@@ -41,13 +50,17 @@ function Search() {
             />
             <label>3 Geef je Budget aan</label>
             <input
-              type="range"
+              type="number"
               placeholder="3 Geef je Budget aan"
               {...register("maxPrice", { min: 0, max: 5000 })}
             />
 
             <input type="submit" />
           </form>
+        </section>
+        <section>
+          <h2>Zoekparameters voor de API:</h2>
+          <p className="output">..</p>
         </section>
       </main>
       <Footer />
