@@ -4,7 +4,7 @@ import "./Search.css";
 
 function Search() {
   return (
-    <>
+    <div className="searchPage">
       <header>
         <h1>Zoeken, zoeken, zoeken</h1>
         <h3>
@@ -13,7 +13,7 @@ function Search() {
         </h3>
       </header>
       <main>
-        <section>
+        <section className="card">
           <form>
             <fieldset>
               <legend>1 Kies het vliegveld vanwaar je vertrekt</legend>
@@ -42,7 +42,7 @@ function Search() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

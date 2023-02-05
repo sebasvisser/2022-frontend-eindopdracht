@@ -1,4 +1,4 @@
-nav {
+.navBarElement nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,7 +6,7 @@ nav {
     background-color: blue;
 }
 
-ul {
+.navBarElement ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,7 +15,7 @@ ul {
     padding: 0;
 }
 
-li {
+.navBarElement li {
     background-color: blue;
     color: white;
     border-radius: 5px;
@@ -25,25 +25,25 @@ li {
     display: inline-block;
 }
 
-a:visited {
+.navBarElement a:visited {
     color: white;
     text-decoration: none;
 }
 
-.default-link {
+.navBarElement .default-link {
     border: 1px solid transparent;
 }
 
-.active-link {
+.navBarElement .active-link {
     border: 1px solid red;
 }
 
 @media (max-width: 768px) {
-    nav {
+    .navBarElement nav {
         flex-direction: column;
         align-items: center;
     }
-    ul {
+    .navBarElement ul {
         flex-direction: column;
     }
 }

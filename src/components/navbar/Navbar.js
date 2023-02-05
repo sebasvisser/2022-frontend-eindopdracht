@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav>
+    <nav className="navBarElement">
       <h3>Weekend Escapes</h3>
       <ul>
         <li>
