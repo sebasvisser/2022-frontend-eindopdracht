@@ -5,7 +5,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <>
+    <div className="homepage">
       <header>
         <h1>Omdat je gewoon even lekker weg wilt!</h1>
         <h3>In 3 stappen jouw volgende weekend trip vinden</h3>
@@ -45,7 +45,7 @@ function Home() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
