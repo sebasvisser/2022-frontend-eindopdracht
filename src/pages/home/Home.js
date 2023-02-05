@@ -51,9 +51,18 @@ function Home() {
           <article>
             <h3>3 Kies je budget</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              consequatur in ipsum magnam quia quisquam temporibus voluptatum.
-              Explicabo praesentium, voluptatibus?
+              In de derde stap van het boeken van een vliegticket is het
+              belangrijk om een budget vast te stellen. Dit zal je helpen
+              bepalen welke opties realistisch zijn en welke reisbestemmingen
+              binnen jouw financiële middelen vallen. Het is aan te raden om
+              rekening te houden met de kosten van het vliegticket, maar ook met
+              andere kosten die verbonden zijn aan de reis, zoals vervoer naar
+              het vliegveld, overnachtingen en uitgaven ter plaatse. Door een
+              realistisch budget vast te stellen, kun je ervoor zorgen dat je
+              niet voor vervelende verrassingen komt te staan en dat je op een
+              verantwoorde manier kunt reizen. Het is daarom belangrijk om goed
+              te overwegen hoeveel je kunt besteden aan je reis en hoe je dit
+              budget het beste kunt inzetten.
             </p>
           </article>
         </section>

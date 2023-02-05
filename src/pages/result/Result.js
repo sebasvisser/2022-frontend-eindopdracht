@@ -3,6 +3,9 @@ import Footer from "../../components/footer/Footer";
 import "./Result.css";
 
 function Result() {
+  // zoekopdracht om api mee te testen
+  const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=AMS&departureDate=2023-02-23&oneWay=false&nonStop=false&maxPrice=500&viewBy=DESTINATION`;
+
   return (
     <>
       <header>

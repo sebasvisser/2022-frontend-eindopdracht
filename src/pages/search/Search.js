@@ -23,7 +23,10 @@ function Search() {
 
     paragraph.textContent = requestURL;
 
-    redirect("./result");
+    // TODO requestURL in Context opslaan
+
+    // TODO doorsturen naar resultatenpagina
+    //redirect("./result");
   };
   console.log(errors);
 
