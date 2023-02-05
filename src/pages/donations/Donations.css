@@ -1,22 +1,22 @@
-header h1, header h3 {
+.donationsPage header h1, header h3 {
     text-align: center;
 }
 
-main {
+.donationsPage main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-section {
+.donationsPage section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-article {
+.donationsPage article {
     width: 400px;
     height: 450px;
     margin: 20px;
@@ -26,18 +26,18 @@ article {
     box-shadow: 2px 2px 10px #ccc;
 }
 
-article ul {
+.donationsPage article ul {
     list-style: none;
     padding-left: 20px;
 }
 
-article ul li::before {
+.donationsPage article ul li::before {
     content: "✔";
     color: green;
     margin-right: 10px;
 }
 
-DonateButton {
+.donationsPage DonateButton {
     width: 100px;
     height: 40px;
     border: 2px solid darkgrey;
@@ -47,7 +47,7 @@ DonateButton {
     margin: 20px auto;
 }
 
-DonateButton[fantastisch='true'] {
+.donationsPage DonateButton[fantastisch='true'] {
     background-color: blue;
     color: white;
 }

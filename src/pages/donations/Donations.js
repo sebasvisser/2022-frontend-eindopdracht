@@ -5,7 +5,7 @@ import "./Donations.css";
 
 function Donations() {
   return (
-    <>
+    <div className="donationsPage">
       <header>
         <h1>Doneer nu het nog kan!</h1>
         <h3>
@@ -48,7 +48,7 @@ function Donations() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
