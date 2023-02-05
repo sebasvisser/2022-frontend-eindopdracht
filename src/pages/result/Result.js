@@ -15,7 +15,7 @@ function Result() {
       </header>
       <main>
         <header>
-          <span id={"resultSpan"}>Hier komen de resultaten.</span>
+          <ul id={"resultList"}>Hier komen de resultaten.</ul>
         </header>
       </main>
       <Footer />
