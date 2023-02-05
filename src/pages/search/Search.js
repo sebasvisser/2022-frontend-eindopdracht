@@ -1,8 +1,17 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import Footer from "../../components/footer/Footer";
 import "./Search.css";
 
 function Search() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
+
   return (
     <div className="searchPage">
       <header>
@@ -14,30 +23,16 @@ function Search() {
       </header>
       <main>
         <section className="card">
-          <form>
-            <fieldset>
-              <legend>1 Kies het vliegveld vanwaar je vertrekt</legend>
-              <label htmlFor="airport-input">Vertrek vliegveld</label>
-              <select>
-                <option value="MST">Maastricht Aachen Airport</option>
-                <option value="EIN">Eindhoven Airport</option>
-                <option value="NRN">Weeze Airport</option>
-              </select>
-            </fieldset>
-            <fieldset>
-              <legend>2 Kies jouw vertrek datum</legend>
-              <label htmlFor="date-input">Vertrek datum</label>
-              <input type="date" name="date-input" id="date-input" />
-            </fieldset>
-            <fieldset>
-              <legend>3 Geef je Budget aan</legend>
-              <label htmlFor="budget-input">Enter budget:</label>
-              <input type="number" name="budget-input" id="budget-input" />
-            </fieldset>
-            <fieldset>
-              <legend>Zoekopdracht Starten</legend>
-              <button type="submit">Zoek mijn Weekend Escape</button>
-            </fieldset>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <select {...register("1 Kies het vliegveld vanwaar je vertrekt")}>
+              <option value="Maastricht Aachen Airport">Maastricht Aachen Airport</option>
+              <option value=" Eindhoven Airport"> Eindhoven Airport</option>
+              <option value="Weeze Airport">Weeze Airport</option>
+            </select>
+            <input type="datetime-local" placeholder="2 Kies jouw vertrek datum" {...register("2 Kies jouw vertrek datum", {})} />
+            <input type="range" placeholder="3 Geef je Budget aan" {...register("3 Geef je Budget aan", {, max: 5000, min: 0})} />
+
+            <input type="submit" />
           </form>
         </section>
       </main>
