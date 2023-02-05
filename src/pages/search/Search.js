@@ -35,7 +35,7 @@ function Search() {
             </select>
             <label>2 Kies jouw vertrek datum</label>
             <input
-              type="datetime-local"
+              type="date"
               placeholder="2 Kies jouw vertrek datum"
               {...register("departureDate", {})}
             />
