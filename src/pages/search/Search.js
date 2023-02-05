@@ -18,6 +18,7 @@ function Search() {
     const requestOrigin = data.origin;
     const requestDate = data.departureDate;
     const requestBudget = data.maxPrice;
+    // onderstaande URL is voor Amadeus API
     const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=${requestOrigin}&departureDate=${requestDate}&oneWay=false&nonStop=false&maxPrice=${requestBudget}&viewBy=DESTINATION`;
 
     paragraph.textContent = requestURL;
