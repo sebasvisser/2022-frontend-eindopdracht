@@ -39,9 +39,10 @@ function Search() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>1 Kies het vliegveld vanwaar je vertrekt</label>
             <select {...register("origin")}>
-              <option value="MST">Maastricht Aachen Airport</option>
-              <option value="EIN"> Eindhoven Airport</option>
+              <option value="AMS">Amsterdam Airport</option>
+              <option value="DUS">Dusseldorf Airport</option>
               <option value="NRN">Weeze Airport</option>
+              <option value="CGN">Keulen Airport</option>
             </select>
             <label>2 Kies jouw vertrek datum</label>
             <input
