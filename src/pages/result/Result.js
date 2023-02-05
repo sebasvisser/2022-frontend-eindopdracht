@@ -13,8 +13,8 @@ function Result() {
         const res = await axios.post(
           "https://test.api.amadeus.com/v1/security/oauth2/token",
           {
-            client_id: "lfrMmgzyxkKQWAejnB3TTwWTysnlchr2",
-            client_secret: "rz1PfA4uHlYL433d",
+            client_id: "",
+            client_secret: "",
             grant_type: "client_credentials",
           },
           {
