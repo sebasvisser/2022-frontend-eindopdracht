@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../components/footer/Footer";
 import axios from "axios";
+import "./Profile.css";
 
 function Profile() {
   // Stukje state om alle info over profiel in op te slaan
