@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import Footer from "../../components/footer/Footer";
 import "./Search.css";
 
+{
+  /* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft. */
+}
 function Search() {
   const {
     register,
@@ -24,13 +27,24 @@ function Search() {
       <main>
         <section className="card">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <select {...register("1 Kies het vliegveld vanwaar je vertrekt")}>
-              <option value="Maastricht Aachen Airport">Maastricht Aachen Airport</option>
-              <option value=" Eindhoven Airport"> Eindhoven Airport</option>
-              <option value="Weeze Airport">Weeze Airport</option>
+            <label>1 Kies het vliegveld vanwaar je vertrekt</label>
+            <select {...register("origin")}>
+              <option value="MST">Maastricht Aachen Airport</option>
+              <option value="EIN"> Eindhoven Airport</option>
+              <option value="NRN">Weeze Airport</option>
             </select>
-            <input type="datetime-local" placeholder="2 Kies jouw vertrek datum" {...register("2 Kies jouw vertrek datum", {})} />
-            <input type="range" placeholder="3 Geef je Budget aan" {...register("3 Geef je Budget aan", {, max: 5000, min: 0})} />
+            <label>2 Kies jouw vertrek datum</label>
+            <input
+              type="datetime-local"
+              placeholder="2 Kies jouw vertrek datum"
+              {...register("departureDate", {})}
+            />
+            <label>3 Geef je Budget aan</label>
+            <input
+              type="range"
+              placeholder="3 Geef je Budget aan"
+              {...register("maxPrice", { min: 0, max: 5000 })}
+            />
 
             <input type="submit" />
           </form>
