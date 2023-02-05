@@ -1,11 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { redirect } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import "./Search.css";
 
-{
-  /* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft. */
-}
+/* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft. */
+
 function Search() {
   const {
     register,
@@ -22,6 +22,11 @@ function Search() {
     const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=${requestOrigin}&departureDate=${requestDate}&oneWay=false&nonStop=false&maxPrice=${requestBudget}&viewBy=DESTINATION`;
 
     paragraph.textContent = requestURL;
+
+    // TODO requestURL in Context opslaan
+
+    // TODO doorsturen naar resultatenpagina
+    //redirect("./result");
   };
   console.log(errors);
 
