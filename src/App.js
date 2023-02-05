@@ -4,12 +4,12 @@ import { Route, Navigate, Routes } from "react-router-dom";
 // componenten
 import NavBar from "./components/navbar/Navbar";
 // pagina's
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Result from "./pages/Result";
-import Donations from "./pages/Donations";
-import Profile from "./pages/Profile";
-import NotFound from "./pages/NotFound";
+import Home from "./pages/home/Home";
+import Search from "./pages/search/Search";
+import Result from "./pages/result/Result";
+import Donations from "./pages/donations/Donations";
+import Profile from "./pages/profile/Profile";
+import NotFound from "./pages/404/NotFound";
 
 function App() {
   return (

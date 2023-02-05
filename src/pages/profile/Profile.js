@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "../components/footer/Footer";
+import Footer from "../../components/footer/Footer";
 import axios from "axios";
 
 function Profile() {

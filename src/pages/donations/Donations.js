@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/footer/Footer";
-import DonateButton from "../components/donatebutton/DonateButton";
+import Footer from "../../components/footer/Footer";
+import DonateButton from "../../components/donatebutton/DonateButton";
 
 function Donations() {
   return (
