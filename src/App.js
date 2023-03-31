@@ -14,6 +14,7 @@ import NotFound from "./pages/404/NotFound";
 function App() {
   return (
     <>
+      {/*// Maken context hier zodat profielpagina achter inlog zit*/}
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
