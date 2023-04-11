@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import axios from "axios";
 import "./Profile.css";
@@ -16,8 +16,9 @@ function Profile() {
       console.error(e);
     }
   }
-  // getRandomProfile();
-
+  useEffect(() => {
+    getRandomProfile();
+  }, []);
   return (
     <>
       <header>
@@ -31,8 +32,12 @@ function Profile() {
           {/*Hier een button INLOGGEN toevoegen, en die met OnClick de fetchdata aanroepen. Daarna hieronder die data invullen. */}
           <article>
             <ul>
-              <li>Voornaam + Achternaam</li>
-              <li>Email adres</li>
+              <li>
+                {personData.name
+                  ? personData.name.first + " " + personData.name.last
+                  : "Loading..."}
+              </li>
+              <li>{personData.email ? personData.email : "Loading..."}</li>{" "}
             </ul>
           </article>
         </section>
