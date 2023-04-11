@@ -26,6 +26,8 @@ function Profile() {
         <h3>
           Als je nou ingelogd was, dan zouden hieronder jouw gegevens staan.
         </h3>
+        {/* Deze functie moet nog gemaakt worden, inloggen en ophalen data via novi backend
+        <button onClick={logIn}>Klik hier om in te loggen</button>*/}
       </header>
       <main>
         <section>
@@ -39,6 +41,9 @@ function Profile() {
               </li>
               <li>{personData.email ? personData.email : "Loading..."}</li>{" "}
             </ul>
+            <button onClick={getRandomProfile}>
+              Klik hier om andere profiel-data op te halen
+            </button>
           </article>
         </section>
       </main>
