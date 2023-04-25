@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
-import SignupForm from "../../components/login/login";
+import SignupForm from "../../components/login/Login";
 import axios from "axios";
 import "./Profile.css";
 
-async function makeGetRequest() {
-  try {
-    const apiCheck = await axios.get(
-      "https://frontend-educational-backend.herokuapp.com/api/test/all"
-    );
-    console.log(apiCheck);
-  } catch (e) {
-    console.error(e);
-  }
-}
-
 function Profile() {
+  // stukje state om de backend dingen op te slaan
+  const [apiData, setApiData] = useState("");
+  // backend aanspreken om te testen of die wakker is ;)
+  async function makeGetRequest() {
+    try {
+      const apiCheck = await axios.get(
+        "https://frontend-educational-backend.herokuapp.com/api/test/all"
+      );
+      console.log(apiCheck);
+      setApiData(apiCheck.data);
+      console.log(apiData); // hier komt nog een lege string uit omdat state niet snel genoeg geupdate is voordat deze regel uitgevoerd wordt.
+      console.log(apiCheck.data); // Hier zie je wat er had moeten staan.
+    } catch (e) {
+      console.error(e);
+    }
+  }
   // Stukje state om alle info over profiel in op te slaan
   const [personData, setPersonData] = useState({});
   // Data van API binnenhalen zodat Profiel van Random iemand getoond kan worden indien niet ingelogd.
@@ -38,6 +43,7 @@ function Profile() {
         <button onClick={makeGetRequest}>
           Klik hier om de api te checken{" "}
         </button>
+        <p>Response: {apiData} </p>
         <h3>
           Als je nou ingelogd was, dan zouden hieronder jouw gegevens staan.
         </h3>
