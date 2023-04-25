@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { useAuth } from "./context/AuthContext";
 
 function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { setToken } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault(); // voorkomt standaard gedrag van de submit-knop
@@ -31,6 +33,7 @@ function LoginForm() {
         alert("Inloggen is succesvol!");
         const token = data.accessToken;
         console.log(token);
+        setToken(token);
         // sla het token op in localstorage of cookies om het te bewaren voor toekomstige aanvragen
       })
       .catch((error) => {
