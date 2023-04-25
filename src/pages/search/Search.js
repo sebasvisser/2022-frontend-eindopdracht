@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { redirect } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
@@ -12,16 +13,34 @@ function Search() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
     const paragraph = document.querySelector(".output");
     const requestOrigin = data.origin;
     const requestDate = data.departureDate;
     const requestBudget = data.maxPrice;
     // onderstaande URL is voor Amadeus API
-    const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=${requestOrigin}&departureDate=${requestDate}&oneWay=false&nonStop=false&maxPrice=${requestBudget}&viewBy=DESTINATION`;
+    //nonStop boolean(query) if this parameter is set to true, only flights going from the origin to the destination with no stop in-between are considered
+    const requestURL2 = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=${requestOrigin}&departureDate=${requestDate}&oneWay=false&nonStop=true&maxPrice=${requestBudget}&viewBy=DESTINATION`;
+    // hieronder opgedeelde requestURL
+    const requestURL = await axios.get(
+      "https://test.api.amadeus.com/v1/shopping/flight-destinations",
+      {
+        params: {
+          origin: requestOrigin,
+          departureDate: requestDate,
+          oneWay: "false",
+          nonStop: "true",
+          maxPrice: requestBudget,
+          viewBy: "DESTINATION",
+        },
+        headers: {
+          Authorization: "Bearer CpjU0sEenniHCgPDrndzOSWFk5mN",
+        },
+      }
+    );
 
-    paragraph.textContent = requestURL;
+    paragraph.textContent = requestURL2;
 
     // TODO requestURL in Context opslaan
 
