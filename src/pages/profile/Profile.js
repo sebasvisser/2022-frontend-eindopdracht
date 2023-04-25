@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import SignupForm from "../../components/Signup/Signup";
 import LoginForm from "../../components/Login/Login";
+import { useAuth } from "../../context/AuthContext.js";
 import axios from "axios";
 import "./Profile.css";
 
@@ -37,6 +38,9 @@ function Profile() {
   useEffect(() => {
     getRandomProfile();
   }, []);
+  // token uit de context halen:
+  const { token } = useAuth();
+
   return (
     <>
       <header>
@@ -45,11 +49,7 @@ function Profile() {
           Klik hier om de api te checken{" "}
         </button>
         <p>Response: {apiData} </p>
-        <h3>
-          Als je nou ingelogd was, dan zouden hieronder jouw gegevens staan.
-        </h3>
-        {/* Deze functie moet nog gemaakt worden, inloggen en ophalen data via novi backend
-        <button onClick={logIn}>Klik hier om in te loggen</button>*/}
+        <h3>Hier staat leuke nep-data vanuit de Random API.</h3>
       </header>
       <main>
         <section>
@@ -67,18 +67,26 @@ function Profile() {
             </button>
           </article>
         </section>
-        <article>
-          {/*hier een inlogformulier verbonden met de Novi Backend*/}
-          <h2>Registreren kan hier</h2>
-          <SignupForm />
-        </article>
-        {/*Hier een button INLOGGEN toevoegen, en die met OnClick de fetchdata aanroepen. Daarna hieronder die data invullen. */}
-        <article>
-          {/*hier een inlogformulier verbonden met de Novi Backend*/}
-          <h2>Inloggen kan hier:</h2>
-          <LoginForm />
-        </article>
-        <section></section>
+        <section>
+          {!token && (
+            <article>
+              <h2>Registreren kan hier</h2>
+              <SignupForm />
+            </article>
+          )}
+          {!token && (
+            <article>
+              <h2>Inloggen kan hier:</h2>
+              <LoginForm />
+            </article>
+          )}
+          {token && (
+            <article>
+              <h2>Welkom, je bent ingelogd!</h2>
+              {/* Leuk om hier de naam van de ingelogd toe te voegen. */}
+            </article>
+          )}
+        </section>
       </main>
       <Footer />
     </>
