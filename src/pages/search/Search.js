@@ -4,7 +4,7 @@ import { redirect } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import "./Search.css";
 
-/* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft. */
+/* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft.  */
 
 function Search() {
   const {
