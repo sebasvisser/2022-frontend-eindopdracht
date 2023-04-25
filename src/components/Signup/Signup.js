@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./Signup.css";
 
-function LoginForm() {
+function SignupForm() {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
@@ -11,12 +12,14 @@ function LoginForm() {
     // stel de JSON-gegevens samen voor de POST-request
     const data = {
       username: username,
+      email: email,
       password: password,
+      role: ["user"], // geef de gebruiker de 'user'-rol
     };
 
     // voer de POST-request uit naar de backend
     fetch(
-      "https://frontend-educational-backend.herokuapp.com/api/auth/signin",
+      "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
       {
         method: "POST",
         headers: {
@@ -27,15 +30,15 @@ function LoginForm() {
     )
       .then((response) => response.json())
       .then((data) => {
-        // als Inloggen succesvol was, toon dan de successmelding en bewaar het authorisatie-token
-        alert("Inloggen is succesvol!");
+        // als de registratie succesvol was, toon dan de successmelding en bewaar het authorisatie-token
+        alert("Registratie is succesvol!");
         const token = data.accessToken;
         console.log(token);
         // sla het token op in localstorage of cookies om het te bewaren voor toekomstige aanvragen
       })
       .catch((error) => {
-        // als het inloggen is mislukt, toon dan de foutmelding
-        alert("Inloggen mislukt: " + error);
+        // als de registratie is mislukt, toon dan de foutmelding
+        alert("Registratie mislukt: " + error);
       });
   };
 
@@ -51,6 +54,16 @@ function LoginForm() {
         required
       />
 
+      <label htmlFor="email">E-mailadres:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        required
+      />
+
       <label htmlFor="password">Wachtwoord:</label>
       <input
         type="password"
@@ -61,9 +74,9 @@ function LoginForm() {
         required
       />
 
-      <button type="submit">Inloggen</button>
+      <button type="submit">Registreren</button>
     </form>
   );
 }
 
-export default LoginForm;
+export default SignupForm;

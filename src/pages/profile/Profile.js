@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
-import SignupForm from "../../components/Login/Login";
+import SignupForm from "../../components/Signup/Signup";
+import LoginForm from "../../components/Login/Login";
 import axios from "axios";
 import "./Profile.css";
 
@@ -68,9 +69,15 @@ function Profile() {
         </section>
         <article>
           {/*hier een inlogformulier verbonden met de Novi Backend*/}
+          <h2>Registreren kan hier</h2>
           <SignupForm />
         </article>
         {/*Hier een button INLOGGEN toevoegen, en die met OnClick de fetchdata aanroepen. Daarna hieronder die data invullen. */}
+        <article>
+          {/*hier een inlogformulier verbonden met de Novi Backend*/}
+          <h2>Inloggen kan hier:</h2>
+          <LoginForm />
+        </article>
         <section></section>
       </main>
       <Footer />
