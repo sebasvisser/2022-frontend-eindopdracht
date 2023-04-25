@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { redirect } from "react-router-dom";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import "./Search.css";
 
 /* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft.  */
