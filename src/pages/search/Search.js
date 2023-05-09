@@ -8,6 +8,9 @@ import "./Search.css";
 /* Binnen het formulier gebruik gemaakt van veld id's zoals ze ook binnen de Amadeus API gebruikt worden. Dus vertrekvliegvelden volgens de IATA-lijst. En de overige parameters ook zoals de api het voorschrijft.  */
 
 function Search() {
+  // const requestURL aanmaken om foutmelding Netlify
+  const requestURL = `https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=AMS&departureDate=2023-02-23&oneWay=false&nonStop=false&maxPrice=500&viewBy=DESTINATION`;
+
   const {
     register,
     handleSubmit,
@@ -39,6 +42,8 @@ function Search() {
         },
       }
     );
+    // foutmleding Netlify oplossen
+    console.log(requestURL);
 
     paragraph.textContent = requestURL2;
 
