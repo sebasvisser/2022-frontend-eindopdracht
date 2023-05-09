@@ -60,6 +60,7 @@ function Result() {
         <h1 id={"resultHeader"}>
           Jouw ideale Weekend Escape zijn we aan het zoeken..
         </h1>
+        <p>request URL om even unused error te voorkomen{requestURL}</p>
       </header>
       <main>
         <header>

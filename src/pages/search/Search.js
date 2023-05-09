@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { redirect } from "react-router-dom";
+// import { redirect } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import "./Search.css";
 
@@ -57,6 +57,7 @@ function Search() {
           Vinden, vinden, vinden, vinden vinden, vinden, vinden vinden, vinden,
           vinden.
         </h3>
+        <p>request URL om even unused error te voorkomen{requestURL}</p>
       </header>
       <main>
         <section className="card">

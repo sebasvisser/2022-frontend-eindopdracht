@@ -37,7 +37,7 @@ function Profile() {
   }
   useEffect(() => {
     getRandomProfile();
-  }, []);
+  }, [getRandomProfile]);
   // token uit de context halen:
   const { token } = useAuth();
 
@@ -83,6 +83,7 @@ function Profile() {
           {token && (
             <article>
               <h2>Welkom, je bent ingelogd!</h2>
+              <p>Je bent ingelogd met deze token: {token}</p>
               {/* Leuk om hier de naam van de ingelogd toe te voegen. */}
             </article>
           )}
